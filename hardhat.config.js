@@ -5,7 +5,7 @@ const myCon = require('./mysetting').config;
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   etherscan: {
-    apiKey: 'UZSVTFR1JQUWPZ6FMDKJU4QSX2PV3M6KTK',
+    apiKey: process.env.ETHERSCAN_API_KEY,
   },
   networks: {
     hardhat: {},
@@ -42,7 +42,7 @@ module.exports = {
     enabled: true,
     currency: 'USD',
     gasPrice: 21,
-    coinmarketcap: '0911b37b-2929-4707-8d4b-df11a55ae34e',
+    coinmarketcap: process.env.COIN_MARKET_API_KEY,
     token: 'ETH',
   },
 };
